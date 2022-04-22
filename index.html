@@ -12,7 +12,11 @@
     <section class="wrapper">
         <section class="header">
             <div class="container container-header">
-                <div class="logo">AX<span class="logo__active">IT</span></div>
+                <div class="logo">
+                    <a href="#home" class="scroll-to">
+                        AX<span class="logo__active">IT</span>
+                    </a>
+                </div>
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__list-item">
@@ -34,7 +38,7 @@
                 </nav>
             </div>
         </section>
-        <section class="main" id="feautures">
+        <section class="main" id="home">
             <div class="container main-container">
                 <div class="main-description">
                     <div class="main-description__lable">AX<span class="lable__active">IT</span></div>
@@ -103,16 +107,28 @@
                 </div>
             </div>
         </section>
-        <section class="procces">
+        <section class="procces" id="feautures">
             <div class="container procces-container">
                 <div class="procces-tabs">
-                    <div class="procces-tabs__card">Tab 1</div>
-                    <div class="procces-tabs__card">Tab 2</div>
-                    <div class="procces-tabs__card">Tab 3</div>
+                    <button class="procces-tabs__card procces-tabs__card-active" data-id="#tab_1">Tab 1</button>
+                    <button class="procces-tabs__card" data-id="#tab_2">Tab 2</button>
+                    <button class="procces-tabs__card" data-id="#tab_3">Tab 3</button>
                 </div>
                 <div class="procces-main">
                     <h3 class="procces-main__title">Tabs with soft transitioning effect.</h3>
-                    <div class="procces-main__description">
+                    <div class="procces-main__description procces-main__description-active" id="tab_1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+                        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
+                        justo commodo.
+                    </div>
+                    <div class="procces-main__description" id="tab_2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+                        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
+                        justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
+                        penatibus et magnis dis parturient montes.
+                        
+                    </div>
+                    <div class="procces-main__description" id="tab_3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
                         bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
                         justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
@@ -283,7 +299,7 @@
             <div class="container contact-container">
                 <h2 class="contact-title">Contact us</h2>
                 <p class="contact-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <form class="contact-form" action="#" name="contact-form">
+                <form class="contact-form" action="#" name="contact-form" id="contact-form">
                     <div class="contact-form__colum">
                         <label class="contact-form__colum-lable" for="name">Name</label>
                         <input class="contact-form__colum-input" type="text" name="name">

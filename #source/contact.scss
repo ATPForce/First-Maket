@@ -68,4 +68,11 @@
     background-color: #EC7979;
     border: none;
     padding: 12px 32px;
+    transition: 0.3s;
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
 }

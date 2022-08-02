@@ -1,17 +1,3 @@
-function scrolling() {
-  const anchors = document.querySelectorAll('a.scroll-to')
-  for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault()
-      const blockID = anchor.getAttribute('href')
-      document.querySelector(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
-    })
-  }
-}
-
 function tabs() {
   const tabsBtn = document.querySelectorAll('.procces-tabs__card');
   const tabsContent = document.querySelectorAll('.procces-main__description');
@@ -32,12 +18,48 @@ function tabs() {
       }
     })
   });
-
 }
 
+function scrolling(bgList,bgMenu,bgScroll) {
+  const anchors = document.querySelectorAll('a.scroll-to');
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+      const blockID = anchor.getAttribute('href')
+      document.querySelector(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+      bgList.classList.remove("navigation__active");
+      bgMenu.classList.remove("nav-menu__active");
+      bgScroll.classList.remove("lock");
+    })
+  }
+}
+
+function burger() {
+  const burgerMenu = document.querySelector(".nav-menu");
+  const burgerList = document.querySelector(".navigation");
+  const stopScroll = document.querySelector("body");
+  burgerMenu.addEventListener('click', (e) => {
+    if (!burgerList.classList.contains("navigation__active")) {
+      burgerList.classList.add("navigation__active");
+      burgerMenu.classList.add("nav-menu__active");
+      stopScroll.classList.add("lock");
+    }
+    else {
+      burgerList.classList.remove("navigation__active");
+      burgerMenu.classList.remove("nav-menu__active");
+      stopScroll.classList.remove("lock");
+    }
+  });
+  scrolling(burgerList,burgerMenu,stopScroll);
+}
+
+
 function render() {
-  scrolling();
   tabs();
+  burger();
 }
 
 render();

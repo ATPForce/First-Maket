@@ -24,6 +24,16 @@
     z-index: 3;
     padding-top: 108px;
     padding-bottom: 100px;
+    @media screen and (max-width: 992px) {
+        justify-content: center;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 576px) {
+        align-content: center;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
 }
 .main-description {
 
@@ -31,6 +41,13 @@
             color: #FFFFFF;
             font-size: 60px;
             margin-bottom: 36px;
+            @media (max-width: 992px) {
+                text-align: center;
+            }
+            @media (max-width: 576px) {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
 		}
 
 		&__title {
@@ -45,6 +62,23 @@
                 border: 1px solid #FFFFFF;
                 width: 64px;
                 margin: 40px 0;
+                @media (max-width: 992px) {
+                    margin: auto;
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                }
+                @media (max-width: 576px) {
+                    margin: auto;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            @media (max-width: 992px) {
+                text-align: center;
+            }
+            @media (max-width: 576px) {
+                font-size: 26px;
+                line-height: 32px;
             }
 		}
 
@@ -53,9 +87,15 @@
             font-size: 16px;
             width: 250px;
             margin-bottom: 40px;
+            @media (max-width: 992px) {
+                text-align: center;
+                margin: auto;
+                margin-bottom: 40px;
+            }
 		}
 
 		&__button {
+            display: block;
             padding: 12px 25px;
             border: 1px solid #FFFFFF;
             background-color: inherit;
@@ -70,6 +110,10 @@
             }
             &:active {
                 transform: scale(0.9);
+            }
+            @media (max-width: 992px) {
+                margin: auto;
+                margin-bottom: 40px;
             }
 		}
 }
@@ -109,11 +153,18 @@
         &__colum-lable {
             font-size: 14px;
             color: #BDBDBD;
+            @media (max-width: 576px) {
+                font-size: 1.2rem;
+            }
         }
         &__colum-input {
             margin-bottom: 20px;
             border: none;
             border-bottom: 1px solid #BDBDBD;
+            @media (max-width: 576px) {
+                height: 1.9rem;
+                font-size: 1.2rem;
+            }
         }
 		&__button {
             background-color: #EC7979;
@@ -125,9 +176,18 @@
             &:hover {
                 font-size: 15px;
                 cursor: pointer;
+                @media (max-width: 576px) {
+                    font-size: 1.15rem;
+                }
             }
             &:active {
                 font-size: 14px;
+                @media (max-width: 576px) {
+                    font-size: 1rem;
+                }
+            }
+            @media (max-width: 576px) {
+                font-size: 1rem;
             }
 		}
 }

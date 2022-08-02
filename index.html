@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Maket_First</title>
 </head>
 <body>
     <section class="wrapper">
-        <section class="header">
+        <header class="header">
             <div class="container container-header">
-                <div class="logo">AX<span class="logo__active">IT</span></div>
+                <div class="logo">
+                    <a href="#home" class="scroll-to">
+                        AX<span class="logo__active">IT</span>
+                    </a>
+                </div>
                 <nav class="navigation">
                     <ul class="navigation__list">
-                        <li class="navigation__list-item">Feautures</li>
-                        <li class="navigation__list-item">About</li>
-                        <li class="navigation__list-item">Pricing</li>
-                        <li class="navigation__list-item">Reviews</li>
-                        <li class="navigation__list-item">Contact</li>
+                        <li class="navigation__list-item">
+                            <a href="#feautures" class="scroll-to">Feautures</a>
+                        </li>
+                        <li class="navigation__list-item">
+                            <a href="#about" class="scroll-to">About</a>
+                        </li>
+                        <li class="navigation__list-item" >
+                            <a href="#price" class="scroll-to">Pricing</a>
+                        </li>
+                        <li class="navigation__list-item">
+                            <a href="#reviews" class="scroll-to">Reviews</a>
+                        </li>
+                        <li class="navigation__list-item">
+                            <a href="#contact" class="scroll-to">Contact</a>
+                        </li>
                     </ul>
                 </nav>
+                <div class="nav-menu">
+                    <span class="nav-menu__burger"></span>
+                </div>
             </div>
-        </section>
-        <section class="main">
+        </header> 
+        <main class="main" id="home">
             <div class="container main-container">
                 <div class="main-description">
                     <div class="main-description__lable">AX<span class="lable__active">IT</span></div>
@@ -32,22 +49,22 @@
                     <p class="main-description__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean</p>
                     <button class="main-description__button">Download</button>
                 </div>
-                <form class="main-form" action="#">
+                <form class="main-form" method="post" action="#">
                     <div class="main-form__container">
                         <h3 class="main-form__title">Try Your <span class="main-form__title-active">free</span>Trial Today</h3>
                             <div class="main-form__colum">
                             <label class="main-form__colum-lable" for="name">Name</label>
-                            <input class="main-form__colum-input" type="text" name="name">
+                            <input class="main-form__colum-input" type="text" name="name" autocomplete="off">
                             <label class="main-form__colum-lable" for="email">Email</label>
-                            <input class="main-form__colum-input" type="email" name="email">
+                            <input class="main-form__colum-input" type="email" name="email" autocomplete="off">
                             <label class="main-form__colum-lable" for="password">Password</label>
-                            <input class="main-form__colum-input" type="password" name="password">
+                            <input class="main-form__colum-input" type="password" name="password" autocomplete="off">
                         </div>
                     </div>
-                    <button class="main-form__button">Get Started</button>
+                    <button class="main-form__button" type="button">Get Started</button>
                 </form>
             </div>
-        </section>
+        </main>
         <section class="social">
             <div class="container social-container">
                 <div class="social-description">
@@ -60,32 +77,32 @@
                 <div class="social-row">
                     <ul class="social-row__list">
                         <li class="social-row__list-item">
-                            <a href="">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="social-row__list-item">
-                            <a href="">
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-twitter"></i>
                             </a>
                         </li>
                         <li class="social-row__list-item">
-                            <a href="">
+                            <a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-google-plus-g"></i>
                             </a>
                         </li>
                         <li class="social-row__list-item">
-                            <a href="">
+                            <a href="https://www.pinterest.ru/" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-pinterest-p"></i>
                             </a>
                         </li>
                         <li class="social-row__list-item">
-                            <a href="">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                         <li class="social-row__list-item">
-                            <a href="">
+                            <a href="https://vk.com/im" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-vk"></i>
                             </a>
                         </li>
@@ -93,16 +110,28 @@
                 </div>
             </div>
         </section>
-        <section class="procces">
+        <section class="procces" id="feautures">
             <div class="container procces-container">
                 <div class="procces-tabs">
-                    <div class="procces-tabs__card">Tab 1</div>
-                    <div class="procces-tabs__card">Tab 2</div>
-                    <div class="procces-tabs__card">Tab 3</div>
+                    <button class="procces-tabs__card procces-tabs__card-active" data-id="#tab_1">Tab 1</button>
+                    <button class="procces-tabs__card" data-id="#tab_2">Tab 2</button>
+                    <button class="procces-tabs__card" data-id="#tab_3">Tab 3</button>
                 </div>
                 <div class="procces-main">
                     <h3 class="procces-main__title">Tabs with soft transitioning effect.</h3>
-                    <div class="procces-main__description">
+                    <div class="procces-main__description procces-main__description-active" id="tab_1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+                        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
+                        justo commodo.
+                    </div>
+                    <div class="procces-main__description" id="tab_2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
+                        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
+                        justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
+                        penatibus et magnis dis parturient montes.
+                        
+                    </div>
+                    <div class="procces-main__description" id="tab_3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
                         bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
                         justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque 
@@ -119,7 +148,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container about-container">
                 <h2 class="about-title">Why this is awesome</h2>
                 <p class="about-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -157,7 +186,7 @@
                 </div>
             </div>
         </section>
-        <section class="price">
+        <section class="price" id="price">
             <div class="container price-container">
                 <h2 class="price-title">Pricing options</h2>
                 <p class="price-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -198,7 +227,7 @@
                 </div>
             </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" id="reviews">
             <div class="container reviews-container">
                 <h2 class="reviews-title">What our customers are saying</h2>
                 <p class="reviews-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -269,11 +298,11 @@
                 <button class="axure-button">Download</button>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container contact-container">
                 <h2 class="contact-title">Contact us</h2>
                 <p class="contact-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <form class="contact-form" action="#" name="contact-form">
+                <form class="contact-form" method="post" action="#" name="contact-form" id="contact-form">
                     <div class="contact-form__colum">
                         <label class="contact-form__colum-lable" for="name">Name</label>
                         <input class="contact-form__colum-input" type="text" name="name">
@@ -290,33 +319,46 @@
                 <button class="contact-button" form="contact-form">Send Message</button>
             </div>
         </section>
-        <section class="footer">
+        <footer class="footer">
             <div class="container footer-container">
                 <div class="footer-social">
                     <ul class="footer-social__list">
                         <li class="footer-social__list-item">
-                            <i class="fa-brands fa-facebook-f"></i>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
                         </li>
                         <li class="footer-social__list-item">
-                            <i class="fa-brands fa-twitter"></i>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
                         </li>
                         <li class="footer-social__list-item">
-                            <i class="fa-brands fa-google-plus-g"></i>
+                            <a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </a>
                         </li>
                         <li class="footer-social__list-item">
-                            <i class="fa-brands fa-pinterest-p"></i>
+                            <a href="https://www.pinterest.ru/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </a>
                         </li>
                         <li class="footer-social__list-item">
-                            <i class="fa-brands fa-instagram"></i>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
                         </li>
                         <li class="footer-social__list-item">
-                            <i class="fa-brands fa-vk"></i>
+                            <a href="https://vk.com/im" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-vk"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer-description">&copy; 2015 Axure Themes</div>
             </div>
-        </section>
+        </footer>
     </section>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

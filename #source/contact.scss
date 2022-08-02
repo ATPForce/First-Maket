@@ -33,14 +33,18 @@
             flex-direction: column;
             flex-wrap: wrap;
             width: 480px;
+            @media (max-width: 992px) {
+                width: auto;
+                width: 45%;
+            }
+            @media (max-width: 768px) {
+                width: 480px;
+            }
 		}
-
 		&__colum-lable {
             font-size: 14px;
             color: #BDBDBD;
-
 		}
-
 		&__colum-input {
             margin-bottom: 32px;
             border: none;
@@ -49,16 +53,26 @@
             font-size: 18px;
             &:last-child {
                 margin: 0;
+                @media (max-width: 768px) {
+                    margin-bottom: 32px;
+                }
+                @media (max-width: 576px) {
+                    margin-bottom: 32px;
+                }
             }
-
 		}
-
 		&__colum-textarea {
             margin-top: 19.6px;
             height: 216px;
             border: 1px solid #BDBDBD;
             resize: none;
 		}
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+        @media (max-width: 576px) {
+            margin-bottom: 30px;
+        } 
 }
 .contact-button {
     display: block;
@@ -68,4 +82,11 @@
     background-color: #EC7979;
     border: none;
     padding: 12px 32px;
+    transition: 0.3s;
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
 }

@@ -48,4 +48,12 @@
     padding: 11px 26px;
     text-align: center;
     color: #FFFFFF;
+    transition: 0.3s;
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+    
 }
